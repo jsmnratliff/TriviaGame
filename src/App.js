@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import AnswerChoice from './components/AnswerChoices';
-import HomePage from './HomePage';
-import GameOver from './GameOver';
-import Questions from './Questions';
+import HomePage from '../src/pages/HomePage';
+import GameOver from './pages/GameOver';
+import Questions from './pages/Questions';
 import ScoreTracker from './components/ScoreTracker';
 import Timer from './components/Timer';
 import { Container } from '@mui/material';

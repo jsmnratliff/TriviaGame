@@ -1,12 +1,12 @@
 import { Button, CircularProgress, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { useHistory } from "react-router-dom";
-import TextFieldComp from "./TextFieldComp";
-import SelectField from "./SelectField";
+import TextFieldComp from "../components/TextFieldComp";
+import SelectField from "../components/SelectField";
 import useAxios from "../hooks/useAxios";
 import { useState } from "react"; // Import useState
 
-const HomePage = () => {
+  const HomePage = () => {
   const { response, error, loading } = useAxios({ url: "/api_category.php" });
   const history = useHistory();
 

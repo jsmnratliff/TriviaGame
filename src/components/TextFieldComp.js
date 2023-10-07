@@ -1,12 +1,14 @@
-import { FormControl, TextFieldComp } from "@mui/material";
-import {Box} from "@mui/system";
+import { FormControl, TextField } from "@mui/material"; // Change TextFieldComp to TextField
+import { Box } from "@mui/system";
 import React from "react";
+import { useDispatch } from "react-redux"; // Import useDispatch
 import { handleAmountChange } from "../redux/actions";
 
-const TextFieldComp = () => {
-    const dispatch = useDispatch()
+const TextFieldComp = () => { // Change function name to match component name
+    const dispatch = useDispatch(); // Use useDispatch (correct case)
+
     const handleChange = (e) => {
-        dispatch(handleAmountChange(e.target.value))
+        dispatch(handleAmountChange(e.target.value));
     };
 
     return (
@@ -18,8 +20,10 @@ const TextFieldComp = () => {
                     label="Amount of Questions"
                     type="number"
                     size="small"
-                    />
+                />
             </FormControl>
         </Box>
     );
 }
+
+export default TextFieldComp
