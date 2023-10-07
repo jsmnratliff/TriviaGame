@@ -1,27 +1,25 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import AnswerChoice from './components/AnswerChoices';
-import HomePage from './components/HomePage';
-import GameOver from './components/GameOver';
-import Questions from './components/Questions';
+import HomePage from './HomePage';
+import GameOver from './GameOver';
+import Questions from './Questions';
 import ScoreTracker from './components/ScoreTracker';
 import Timer from './components/Timer';
-import { Container} from '@mui/material';
+import { Container } from '@mui/material';
 
 function App() {
   return (
     <Router>
       <Container>
-        <div>
-          <Switch>
-          <Route path="/" exact component={HomePage} />
-          <Route path="/questions" component={Questions} />
-          <Route path="/answer" component={AnswerChoice} />
-          <Route path="/score" component={ScoreTracker} />
-          <Route path="/timer" component={Timer} />
-          <Route path="/gameover" component={GameOver} />
-        </Switch>
-        </div>
+        <Routes>
+          <Route path="/" element={<HomePage />} /> {/* Route for HomePage */}
+          <Route path="/questions" element={<Questions />} />
+          <Route path="/answer" element={<AnswerChoice />} />
+          <Route path="/score" element={<ScoreTracker />} />
+          <Route path="/timer" element={<Timer />} />
+          <Route path="/gameover" element={<GameOver />} />
+        </Routes>
       </Container>
     </Router>
   );
